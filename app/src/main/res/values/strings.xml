@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">UnitTest2</string>
+    <string name="settings_title">Settings title</string>
+    <string name="name_label">NAme label</string>
+    <string name="name_hint">Name hint</string>
+    <string name="dob_label">DOB label</string>
+    <string name="email_label">EMail lable</string>
+    <string name="email_hint">Email hint</string>
+    <string name="save">Save</string>
+    <string name="revert">"Revert "</string>
+</resources>
