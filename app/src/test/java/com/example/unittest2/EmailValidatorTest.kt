@@ -5,38 +5,42 @@ import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 class EmailValidatorTest {
+
+    var emailValidator:EmailValidator = EmailValidator()
+    //Object creation for required class
+
     @Test
     fun emailValidator_CorrectEmailSimple_ReturnsTrue(){
-        assertTrue(EmailValidator.isValidEmail("name@email.com"))
+        assertTrue(emailValidator.isValidEmail("name@email.com"))
     }
 
     @Test
     fun emailValidator_CorrectEmailSubDomain_ReturnsTrue() {
-        assertTrue(EmailValidator.isValidEmail("name@email.co.uk"))
+        assertTrue(emailValidator.isValidEmail("name@email.co.uk"))
     }
 
     @Test
     fun emailValidator_InvalidEmailNoTld_ReturnsFalse() {
-        assertFalse(EmailValidator.isValidEmail("name@email"))
+        assertFalse(emailValidator.isValidEmail("name@email"))
     }
 
     @Test
     fun emailValidator_InvalidEmailDoubleDot_ReturnsFalse() {
-        assertFalse(EmailValidator.isValidEmail("name@email..com"))
+        assertFalse(emailValidator.isValidEmail("name@email..com"))
     }
 
     @Test
     fun emailValidator_InvalidEmailNoUsername_ReturnsFalse() {
-        assertFalse(EmailValidator.isValidEmail("@email.com"))
+        assertFalse(emailValidator.isValidEmail("@email.com"))
     }
 
     @Test
     fun emailValidator_EmptyString_ReturnsFalse() {
-        assertFalse(EmailValidator.isValidEmail(""))
+        assertFalse(emailValidator.isValidEmail(""))
     }
 
     @Test
     fun emailValidator_NullEmail_ReturnsFalse(){
-        assertFalse(EmailValidator.isValidEmail(null))
+        assertFalse(emailValidator.isValidEmail(null))
     }
 }
